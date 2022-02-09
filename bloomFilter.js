@@ -18,6 +18,7 @@ class bloomFilter {
 			this.arr3.push(0);
 		}
 	}
+	//hash a user name
 	hash(str) {
 		let sz = str.length;
 		let h1 = 0,
@@ -40,6 +41,7 @@ class bloomFilter {
 		}
 		return [h1, h2, h3];
 	}
+	//Insert an username to the bloom filter
 	insert(str) {
 		let sz = str.length;
 		let arr = this.hash(str);
@@ -50,6 +52,7 @@ class bloomFilter {
 		this.arr2[h2] = 1;
 		this.arr3[h3] = 1;
 	}
+	//This check whether an username is already taken
 	check(str) {
 		let sz = str.length;
 		let arr = this.hash(str);
