@@ -78,6 +78,7 @@ class postFix {
 		}
 		return this.postfix;
 	}
+	//This function evaluaate postfix expression
 	postfixToResult() {
 		let stk = [];
 		for (const elm of this.postfix) {
